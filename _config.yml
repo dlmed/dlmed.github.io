@@ -11,9 +11,9 @@ title                    : "Daniel Medina R."
 title_separator          : "-"
 name                     : &name "Daniel Medina R."
 description              : &description "personal description"
-url                      : https://dlmed.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+url                      : https://dlmed.github.io
+baseurl                  : ""
+repository               : 
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -25,7 +25,7 @@ comments:
   disqus:
     shortname            :
   discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+    server               : 
   facebook:
     appid                :
     num_posts            : # 5 (default)
@@ -99,11 +99,11 @@ author:
   github           : "dlmed"
   google_plus      :
   keybase          :
-  instagram        :
+  instagram        : "https://www.instagram.com/dan.mrv/"
   impactstory      :
   lastfm           :
   linkedin         : "https://www.linkedin.com/in/daniel-medina-3396a3193/"
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            :
   pinterest        :
   soundcloud       :
   stackoverflow    :
@@ -209,15 +209,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
   # _publications
   - scope:
       path: ""
@@ -236,14 +227,7 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
+
 
 # Sass/SCSS
 sass:
