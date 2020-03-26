@@ -1,6 +1,6 @@
 {% include base_path %}
 
-<div class="slideshow-container" onload="currentSlide(2)"> 
+<div class="slideshow-container"> 
 
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
@@ -31,7 +31,10 @@
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
 
-  <script type="text/javascript">  
+  <script type="text/javascript">
+    var initialSlide = 1;
+    showSlides(initialSlide);
+    
     function plusSlides(n) {
       showSlides(slideIndex += n);
     }
