@@ -1,6 +1,6 @@
 ---
 title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/img5.jpg'>"
 collection: proyects
 permalink: /publication/2009-10-01-paper-title-number-1
 ---
