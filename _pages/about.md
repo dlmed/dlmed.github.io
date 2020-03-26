@@ -7,7 +7,12 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
+<!doctype html>
+<html>
+<head>
+    <title>QNimate Slider</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
@@ -42,3 +47,6 @@ redirect_from:
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
+
+</body>
+</html>
