@@ -1,13 +1,13 @@
 {% include base_path %}
 <script type="text/javascript">
-    var slideIndex = 1;
+    var initialSlide = 1;
 
     var myTimer;
 
     var slideshowContainer;
 
     window.addEventListener("load",function() {
-        showSlides(slideIndex);
+        showSlides(slideIndex = initialSlide);
         myTimer = setInterval(function(){plusSlides(1)}, 4000);
     
         slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
