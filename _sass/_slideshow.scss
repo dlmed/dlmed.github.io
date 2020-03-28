@@ -15,6 +15,7 @@
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
+  background: rgba(0,0,0, .6);
   position: absolute;
   top: 50%;
   width: auto;
