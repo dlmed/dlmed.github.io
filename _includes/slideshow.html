@@ -34,18 +34,22 @@
   <script type="text/javascript">
     var slideIndex = 1;
     showSlides(slideIndex);
-    myTimer = setInterval(function(){plusSlides(slideIndex)}, 1000);    
+    myTimer = setInterval(function(){plusSlides(slideIndex)}, 2000);    
 
     function plusSlides(n) {
       clearInterval(myTimer);
       showSlides(slideIndex += n);
-      myTimer = setInterval(function(){plusSlides(n + 1)}, 1000);
+      if (n === -1){
+            myTimer = setInterval(function(){plusSlides(n + 2)}, 2000);
+        } else {
+            myTimer = setInterval(function(){plusSlides(n + 1)}, 2000);
+        }
     }
   
     function currentSlide(n) {
       clearInterval(myTimer);
       showSlides(slideIndex = n);
-      myTimer = setInterval(function(){plusSlides(n + 1)}, 1000);
+      myTimer = setInterval(function(){plusSlides(n + 1)}, 2000);
     }
   
     function showSlides(n) {
