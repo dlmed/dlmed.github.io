@@ -71,5 +71,14 @@
       slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";
     }
+
+    function pause() {
+        clearInterval(myTimer);
+    }
+
+    function resume() {
+        clearInterval(myTimer);
+        myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
+    }
     
   </script>
