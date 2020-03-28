@@ -35,7 +35,7 @@
     var slideIndex = 1;
     showSlides(slideIndex);
     myTimer = setInterval(function(){plusSlides(slideIndex)}, 2000);   
-    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+    slideshowContainer = document.getElementsByClassName('slideshow-container');
     
     slideshowContainer.addEventListener('mouseenter', pause)
     slideshowContainer.addEventListener('mouseleave', resume)
