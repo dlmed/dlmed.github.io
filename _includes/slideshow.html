@@ -35,10 +35,6 @@
     var slideIndex = 1;
     showSlides(slideIndex);
     myTimer = setInterval(function(){plusSlides(slideIndex)}, 2000);   
-    slideshowContainer = document.getElementsByClassName('slideshow-container');
-    
-    slideshowContainer.addEventListener('mouseenter', pause)
-    slideshowContainer.addEventListener('mouseleave', resume)
 
     function plusSlides(n) {
       clearInterval(myTimer);
@@ -74,15 +70,6 @@
       }
       slides[slideIndex-1].style.display = "block";
       dots[slideIndex-1].className += " active";
-    }
-
-    function pause() {
-        clearInterval(myTimer);
-    }
-
-    function resume() {
-        clearInterval(myTimer);
-        myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
     }
     
   </script>
