@@ -32,21 +32,20 @@
   </div>
 
   <script type="text/javascript">
-    var initialSlide = 1;
-    showSlides(slideIndex = initialSlide);
-    myTimer = setInterval(function(){plusSlides(1)}, 4000);
-    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    myTimer = setInterval(function(){plusSlides(slideIndex)}, 1000);    
 
     function plusSlides(n) {
       clearInterval(myTimer);
       showSlides(slideIndex += n);
-      myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+      myTimer = setInterval(function(){plusSlides(n + 1)}, 1000);
     }
   
     function currentSlide(n) {
       clearInterval(myTimer);
       showSlides(slideIndex = n);
-      myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+      myTimer = setInterval(function(){plusSlides(n + 1)}, 1000);
     }
   
     function showSlides(n) {
