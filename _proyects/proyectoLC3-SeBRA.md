@@ -1,0 +1,45 @@
+---
+title: "LC3-SeBRA"
+excerpt: "Low Cost Camera Controlled Self-Balancing Robot Arm<br/><img src='/images/lc3-sebra.png'>"
+collection: proyects
+permalink: /publication/LCC3-SeBRA
+---
+
+
+
+# LC3-SeBRA: Low Cost Camera Controlled Self-Balancing Robot Arm
+
+This is a personal proyect, where I wanted to integrate most of the important concepts of robotics, and at the same time, not spending much money. In simple words, this is a self-balancing robot (SBR) with a robot arm (RA) attached to it, so when the RA is contracted, it behaves like a normal SBR, but when the RA is extended at some point, the mass distribution changes, so now the center of mass is not in the chassis vertical axis (like when it was a simple SBR) and the vertical position is not stable anymore, then the system has to obtain the new stable (balance) position and mantain the SBR around that stable position. The utility of the RA is that it can pick up small objects whose relative position is obtained from real time image processing with a webcam on the ceiling.
+
+As this is a complex proyect for me, I'll split it into functional stages, where each new stage contains the previous one. Here I'll list the stages and the concepts related to each one:
+
+- **Stage 1**: Design and construction. (actuators, needed torque, dimension compatibility, CAD drawing, 3D modeling, laser cutter).
+- **Stage 2**: Self-balancing robot. (PID)
+- **Stage 3**: SeBRA. (inverse and forward kinematics, torque control)
+- **Stage 4**: CC-SeBRA. (OpenCV)
+
+---
+
+## Stage 1: Design and construction
+
+Since it is a low cost proyect, I had to think about construction methods available for me and components I had already. 3D printing wasn't an option beause I didn't have neither the printer nor the filament, so a good option was to use my university's laser cutter and just buy a MDF board (cheaper than acrylic sheet). The robot actuators had to be the cheapest ones that meet the requirements (maximum torque needed).
+
+Components needed for the LC3-SeBRA:
+- 2 DC gearmotors for the SBR
+- 3 servos for the RA
+- microcontroller
+- motor driver
+- accelerometer/gyroscope
+- batteries
+- voltage booster
+- charger module
+
+The batteries used were the 18650 Lipo ones, since I have a bunch from laptop batteries. The cheaper charger module for these batteries is the TP4056 and a high current voltage booster is the XL6009. The microcontroller used was the ESP32 since I already had one and it has 2 I2C buses. The accelerometer is the basic one, MPU6050. The cheapest hobby DC gearmotors I found were the classic plastic gearmotors and the driver for them is the L298N (here it's not needed to have high torque motors, since they will move around a stable position). To choose the right servo motors I did have to do some calculations ($$\tau_{max needed} = \tau_{extended arm} + I\alpha$$).
+
+So after calculations, the right servos seemed to be 2 MG996r for the arm joints and a SG90 for the gripper. I also had to calculate the total current needed for all components to know how much batteries I needed to have around 2 hours of autonomy (and also to choose the right voltage booster). The right number seemed to be 4 (7200mAh).
+
+After knowing the components I was going to use, I started to draw the robot taking is consideration the dimension and location of each component and the range of motion of the RA. Another consideration is that the asembly mode of the chassis was going to be through sockets (laser cutter compatibility).
+
+### General design:
+
+
