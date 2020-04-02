@@ -8,6 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+I am an undergraduate student of Mechanical Engineering (Major in Robotics) at Pontificia Universidad Católica de Chile. The areas that I like the most on this field are, design of robotic systems, adaptive control and biomechatronics. I play with electronics as my hobbie, but I also spend my free time hiking, juggling and doing photography. In my projects I look for new challenges in order to expand my knowledge and expertise. Currently, I am doing an undergraduate research in CanSat (can sized pico-satellite) Design that aims to build a path for future national competitions. You can check my proyects down here or in the *Proyects* section.
 
 {% include simple-slideshow.html %}
